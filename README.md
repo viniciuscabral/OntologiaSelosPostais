@@ -5,6 +5,7 @@ Protótipo de ontologia desenvolvida por Vinícius Cabral e Diego Salcedo
 
 Trabalho de Conclusão de Curso apresentado ao Departamento de Ciência da Informação da Universidade Federal de Pernambuco como requisito para obtenção dos créditos no curso de Gestão da Informação.
 
+Autor: Vinícius Cabral A. Bezerra
 Orientador: Dr. Diego Andres Salcedo
 
 Recife, 2022.
