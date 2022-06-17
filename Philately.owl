@@ -1,0 +1,1426 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vcab/ontologies/2022/0/philately"
+     xml:base="http://www.semanticweb.org/vcab/ontologies/2022/0/philately"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:philately="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CreatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isAuthor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#IssueBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#IssueBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#ProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#ProducedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasComponent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasFirstStampIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasFirstStampIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasIssueReason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasIssueReason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Meterial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasOficialRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasOficialRecord">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasWatermark -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasWatermark">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Watermark"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isAuthor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isDoneUsing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isDoneUsing">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isFacialValueCurrency -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isFacialValueCurrency">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#useTechnique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#useTechnique">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#isDoneUsing"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#currencySymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#currencySymbol">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#faceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#faceValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The amount of value used to sells the postage stamp linked with currency.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#issueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#issueDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#numberOfPostageStampsBySheet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#numberOfPostageStampsBySheet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#numberOfPostageStampsIssued -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#numberOfPostageStampsIssued">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person"/>
+        <rdfs:label xml:lang="pt">Artista</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country"/>
+        <rdfs:label xml:lang="pt">Cidade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#ClassicPostageStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#ClassicPostageStamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#hasIssueReason"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="pt">Celebrates a fact, a date, a personality. It has a settlement and period of validity set in advance. It has characteristic verb-visual elements that set it out from any other type of seal.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Comemora um fato, uma data, uma personalidade. Tem tiragem e período de validade fixado antecipadamente. Tem elementos verbo-visuais característicos que o diferencia de qualquer outro tipo de selo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Commemorative Postage Stamp</rdfs:label>
+        <rdfs:label xml:lang="pt">Selo postal comemorativo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place"/>
+        <rdfs:label xml:lang="pt">País</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#currencySymbol"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+        <rdfs:label xml:lang="pt">Moeda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Some document</rdfs:comment>
+        <rdfs:label xml:lang="pt">Qualquer documento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Event">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="pt">Qualquer evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Watermark"/>
+        <rdfs:label xml:lang="pt">Filigrana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Historian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Historian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person"/>
+        <rdfs:label xml:lang="pt">Historiador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="pt">Qualquer empresa ou instituição que produza um item.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Some company that produce some item.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JornalPostageStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JornalPostageStamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#LocalPostageStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#LocalPostageStamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Meterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Meterial">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Some type of material used to build some item.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Qualquer tipo de material utilizado para construir um objeto.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Paper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Meterial"/>
+        <rdfs:comment xml:lang="en">Some paper type used to create a philatelic item.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de papel que pode ser utilizado para criar um item filatélico como o selo postal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="pt">Qualquer ser humano.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Some human being.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Some place in the world.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Technique"/>
+        <rdfs:label xml:lang="pt">Processo de impressão</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PrivateCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PrivateCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+        <rdfs:label xml:lang="pt">Empresas privadas de capital fechado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PublicCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PublicCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+        <rdfs:label xml:lang="pt">Empresa de capital aberto</rdfs:label>
+        <rdfs:label xml:lang="en">Public company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country"/>
+        <rdfs:label xml:lang="pt">Região</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country"/>
+        <rdfs:label xml:lang="pt">Estado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#StateOwnedCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#StateOwnedCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+        <rdfs:label xml:lang="pt">Empresa estatal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Technique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Technique">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Some way of carrying out a particular task, especially the execution or performance of an artistic work or a scientific procedure</rdfs:comment>
+        <rdfs:label xml:lang="pt">Qualquer tecnica utlizada para desenvolver alguma produção artística e/ou material.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#WarPostageStamp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#WarPostageStamp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Watermark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Watermark">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="pt">Algo utilizado para identificar a autenticidade e originalidade do item.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Something to validate the item authenticity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person"/>
+        <rdfs:label xml:lang="pt">Escritor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BatalhaGuararapes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BatalhaGuararapes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BernardinoSilvaLancetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BernardinoSilvaLancetta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Bernardino da Silva Lacencetta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#StateOwnedCompany"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CentenarioFundacaoOlinda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CentenarioFundacaoOlinda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PublicCompany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Paper"/>
+        <rdfs:label xml:lang="pt">Papel Couché</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CruzeiroReal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CruzeiroReal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+        <philately:currencySymbol>Cr$</philately:currencySymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU04031971 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU04031971">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU18031937 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU18031937">
+        <rdfs:comment xml:lang="pt">dou 18.03.1937,p. 5967</rdfs:comment>
+        <rdfs:label xml:lang="pt">DOU 18.03.1937</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DarlanManoelRosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DarlanManoelRosa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Darlan Manoel Rosa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DiarioDePernambuco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DiarioDePernambuco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PrivateCompany"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital031985 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital031985">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document"/>
+        <rdfs:comment xml:lang="pt">Edital nº 3 de 1985</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital062000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital062000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document"/>
+        <rdfs:label xml:lang="pt">Edital n 6 de 2000</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital201974 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital201974">
+        <rdfs:label xml:lang="pt">Edital 20 de 1974</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital301995 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital301995">
+        <rdfs:label xml:lang="pt">Edital 30 de 1995</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital351984 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital351984"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#EdvaldoGato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#EdvaldoGato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Edvaldo Gato</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fibrado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fibrado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Paper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree"/>
+        <rdfs:label xml:lang="pt">Tipo C &quot;Correio&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree"/>
+        <rdfs:label xml:lang="pt">Tipo K &quot;Cruzeiro&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree"/>
+        <rdfs:label xml:lang="pt">Tipo N &quot;Correinho&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoQ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Filigree"/>
+        <rdfs:label xml:lang="pt">Tipo Q &quot;Correio Estrela Brasil&quot;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fosforescente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fosforescente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Paper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FundacaoCapitaniaPernambuco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FundacaoCapitaniaPernambuco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#GilbertoFreyre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#GilbertoFreyre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Historian"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Writer"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JoOliveira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JoOliveira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Jô Oliveira</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JorgeEduardo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JorgeEduardo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <philately:isAuthor rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#LeopoldoCampos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#LeopoldoCampos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Leopoldo Campos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MarcioRocha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MarcioRocha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <philately:isAuthor rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp19"/>
+        <rdfs:label xml:lang="pt">MÁrcio Rocha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MestreVitalino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MestreVitalino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Olinda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Olinda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City"/>
+        <philately:isPartOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OliviaCastro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OliviaCastro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Olivia Castro Cranwell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State"/>
+        <philately:isPartOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PortoAlegre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PortoAlegre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City"/>
+        <philately:isPartOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RevolucaoPernambucana1817"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU04031971"/>
+        <philately:hasWatermark rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoC"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency)"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Xilagrafia"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1917-03-06T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Este selo comemora os cem anos da Revolução Republicana ou “dos Padres”, ocorrida no ano de 1817 em Pernambuco. Foi um
+movimento contrário à estada da família real portuguesa no Brasil. Essa ação tratou, ao mesmo tempo, de cortar relações com o
+Império estabelecido no Rio de Janeiro e acarretar indagações sobre a realidade social vigente. O vitorioso governo provisório
+deliberou sobre a “criação de uma bandeira azul e branca, repartida horizontalmente com um desenho simbólico”. Emitir um selo
+em que a imagem principal é a bandeira resultante de um movimento revolucionário e, além disso, inscrever a sugestiva expressão
+Revolução Republicana, pode representar a necessidade de renascimento do passado nacional, com o objetivo de enfatizar
+“manifestações de patriotismo”. Sugere, também, coroar uma trajetória de liberdade dessa neófita nação. A imagem tem duas
+colunas jônicas 13 que sustentam o “BRAZIL”, simbolizando assim uma eterna estabilidade. Acima da coluna da esquerda está o
+Brasão do Estado de Pernambuco, oficializado pelo Governador General Alexandre José Barbosa Lima (1892-1931), em 1895.
+Um detalhe interessante na imagem trata sobre as possíveis Flores de Lis ‘deitadas’, cercando ou protegendo o ‘BRAZIL’. A Flor
+de Lis não existe na natureza. É criação simbólica humana, também conhecida como “flor Heráldica [...] símbolo real desde a Alta
+Antiguidade”. Ao centro tem-se a imagem principal do selo: a bandeira do Estado de Pernambuco, presa ao mastro pelo lado
+esquerdo, reprodução fiel que prossegue até hoje.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Bandeira da Rpública de 6 de março de 1817</rdfs:label>
+        <rdfs:label xml:lang="pt">Centenário da Revolução Republicana em Pernmabuco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FundacaoCapitaniaPernambuco"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency)"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Tipografia"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</philately:faceValue>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">70</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Esses selos comemoram os 400 anos da fundação da Capitania de Pernambuco e, por conseguinte, da atual Igarassu, localizada ao
+Norte do Recife. Antiga Nova Lusitânia, depois chamada Santa Cruz e, após mais povoada e organizada, denominada Igaraçu,
+decorrente da corruptela do dialeto tupi IGARA = canoa + ASSÚ =grande. Apesar de ser desconhecido como os nativos, Caetés e
+Tabajaras, denominavam aquela região estuarina, prevaleceu o nome que refletia sua admiração pelas grandes embarcações
+portuguesas. No contexto sócio-político dos anos, o número de selos comemorativos teve um crescimento acentuado. Apregoava-
+se um triunfo de conquista de ordem econômica e social através de eventos e personagens dos períodos coloniais e imperiais
+(vilas, capitanias e missionários). A República pós-30 retomava uma simbologia, de princípio monárquico, a qual havia rejeitado;
+Os selos enfatizavam os símbolos da Igreja, da Cruz, da paisagem colonial, do escravo e de certa ordem social. Os dois selos
+foram elaborados em formato de quadro, com um detalhe original e singular: a unidade monetária empregada de forma abreviada:
+Rs (Réis, no plural). A imagem principal dos selos é uma adaptação manuscrita e recortada da pintura original, que mostra a
+antiga “VILLA DE IGARASSÝ”, como se lê na parte interna da bandeirola. A obra de arte original (Garasu, gravura em cobre,
+pintado à mão), faz parte de uma série de gravuras produzidas, por Frans Post, para o livro “Rerumper octennium in Brasilia et
+alibi nuper gestarum subpraefectura”, editado por Caspar Barlaeus (1584-1648). O Conde João Maurício de Nassau-Siegen
+(1604-1679) encomendou esse livro para registrar suas benfeitorias no Nordeste brasileiro, considerada a obra mais importante do
+Brasil holandês.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Fundação da Capitania de Pernambuco</rdfs:label>
+        <rdfs:label xml:lang="pt">Villa de Igarassú</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#LeopoldoCampos"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CentenarioFundacaoOlinda"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DOU18031937"/>
+        <philately:hasWatermark rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoN"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency)"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TalhoDoce"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1938-01-23T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Comemora os 400 anos da fundação de Olinda, primeira capital do Estado de Pernambuco, instituída pelo donatário português
+Duarte Coelho Pereira (1480-1554), em 1535. A origem do termo Olinda e como se deu essa nomeação, ainda hoje, suscita
+diversas e distintas explicações. Olinda foi a segunda cidade brasileira a ser declarada Patrimônio Histórico e Cultural da
+Humanidade, pela UNESCO, em 1982. No ano da emissão do selo, a sociedade brasileira parecia acreditar que o progresso
+democrático estava em pleno curso, mesmo sob o estado de sítio. A República, por meio do valor publicitário dos selos postais,
+sugeria estar preocupada em legitimar sua presença. A imagem retrata o brasão 24 circular do donatário português Duarte Coelho
+Pereira, um escudo que tem o “fundo arredondado conforme a tradição dos escudos imperiais portugueses”, por cima e
+centralizado sobre o que parece ser uma Cruz Latina. A cruz, símbolo de hermenêutica complexa, corrobora com algumas
+tendências estético-históricas européias ao encontrar-se em posição horizontal, preenchida por foliáceas ramificadas do café, onde
+a “haste superior divide a cruz desigualmente segundo as dimensões de um homem em pé, com os braços estendidos, e só pode
+ser inscrito num retângulo”.</rdfs:comment>
+        <rdfs:label xml:lang="pt">IV Centenário da Fundação da Cidade de Olinda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BernardinoSilvaLancetta"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TerceiroCongressoEucharisticoNacioanal"/>
+        <philately:hasWatermark rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoN"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency)"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TalhoDoce"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1939-09-03T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Comemora o terceiro Congresso Eucarístico Nacional, realizado no antigo Jardim 13 de Maio, atual Parque 13 de Maio, o
+primeiro parque urbano de Recife, construído durante o governo do General Alexandre Lima, reinaugurado durante esse
+Congresso. Os Congressos Eucarísticos remontam à França do século XIX, iniciados por Emilie Tamisier (1834 – 1910). No
+Brasil já ocorreram dezesseis deles, sendo o primeiro em Salvador (1933) e o último em Brasília (2010). Dos Anais do Terceiro
+Congresso Eucharístico Nacional, cedidos cordialmente pelo Conselho Nacional dos Bispos do Brasil (CNBB), fiz questão de
+copiar o trecho que interpreta, na íntegra, os códigos icônicos impressos no selo postal que comemora o evento.
+O emblema do 3° Congresso Eucharístico Nacional lembra uma página expressiva e gloriosa da História de Pernambuco: a
+invasão dos Holandeses, a luta pela reconquista da terra e a expulsão dos invasores. Dessa recordação deu-se a divisão do escudo
+em três partes: a) na inferior vê-se um trecho da costa, já muito conhecida dos piratas e flibusteiros [é o nome dado ao pirata
+americano dos mares nos séculos XVII e XVIII (do francês flibustier, derivado do inglês filibuster, palavra por sua vez derivada
+do neerlandês vrijbuitere], agora alvo da cobiça dos conquistadores; b) a parte do centro apresenta um leão heráldico, sustentando
+na Custódia a Divina Eucharistia, símbolo do povo que saiu a campo contra os invasores com a bravura indômita e generosa do
+leão, para manter a fidelidade ao seu Deus e seu Rei; c) na parte superior, a Igreja votiva de Nossa Senhora dos Prazeres resume a
+grande epopéia que foi a expulsão dos invasores, depois de vencidos nas Tabocas e nos Guararapes. Então se afirmou, com
+rigoroso impulso, o espírito da nacionalidade brasileira pelo amor à terra e às tradições que se vinham encorpando: - admirável
+espírito de solidariedade e coesão de raças diversas, irmanadas num mesmo ideal cristão e patriótico. Ainda hoje muitos católicos
+o usam como distintivo sagrado a recordar os grandes e solenes dias de setembro de 1939, em que a alma católica brasileira se elevou para Deus na mais ardente, na mais vibrante e na mais expressiva manifestação de fé e de amor. O escudo foi a senha do
+Congresso e ele teve o condão de nos recordar uma das páginas mais gloriosas da nossa história. Os selos comemorativos
+emitidos durante a década de 30 sugerem grupos temáticos, sendo um deles ligados “ao esforço de colaboração entre Igreja e
+Estado, uma estratégia que visava à ampliação da base de sustentação política do novo governo”. Essas imagens e temas
+anunciavam no Brasil, e em Pernambuco, um período de ruptura com o pretérito neocolonial. Talvez nada tenha sido rompido, se
+não, meramente conciliado aos interesses das elites.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Terceiro Congresso Eucarístico Nacional</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BernardinoSilvaLancetta"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#BatalhaGuararapes"/>
+        <philately:hasWatermark rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoN"/>
+        <philately:hasWatermark rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#FiligranaTipoQ"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Tipografia"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.60</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-02-15T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">A primeira Batalha dos Guararapes (19/04/1648) foi travada numa linha de redutos e estâncias nas cercanias do Monte
+Guararapes, localizado ao sul do Recife, atual Município de Jaboatão dos Guararapes. Assim, teve início o término da hegemonia
+holandesa no Nordeste brasileiro. “Em 25.01.1654, ao assinar a capitulação da Taborda, em Recife, os representantes da
+Companhia das Índias Ocidentais (W. I. C.), reconheciam a derrota militar”. A segunda metade dos anos 40 foi de apuros com
+relação à gestão econômica dos Correios. Essa situação se somou à &amp;#39;pobre qualidade gráfica dos impressos postais, conseqüência
+de pouco investimento na tecnologia da Casa da Moeda. Os temas postais desse período foram pouco acolhidos pela sociedade&amp;#39;. A
+imagem desse selo é uma versão recortada do quadro original, do artista português Victor Meirelles de Lima (1832-1903), pintado
+com óleo sobre tela, (500 x 900 cm), iniciado em 1875 e concluído em 1879.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Batalha dos Guararapes 1649/1949</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#WaldemiroPuntar"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RestauracaoPernambucana"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fibrado"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CruzeiroReal"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Rotogravura"/>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1954-02-18T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Durante a Restauração, período em que os pernambucanos lutaram e venceram os holandeses, foram criadas as condições para
+que uma consciência de nação pudesse emergir. Foi a guerra da Liberdade Divina, como fora chamada a Insurreição
+Pernambucana, eclodida, em 1654, um movimento surgido à revelia da própria Coroa Portuguesa, da parte dos moradores de
+Pernambuco. Muitos são os ‘heróis’ das guerras. Os lembrados, que possuem seu lugar na memória coletiva nacional, como no
+caso especificado nesse selo, em que se revela uma tetrarquia de heróis restauradores. Mas também aqueles que lutaram e
+morreram sem direito às medalhas, prêmios, nomeações, os que ocupam os lugares do esquecimento dessa mesma memória. O
+imaginário coletivo nativista estaria representado nas figuras daqueles quatro heróis, ou naquela tetrarquia étnica, pelo reinol
+madeirense João Fernandes Vieira (1613-1681), o mazombo paraibano André Vidal de Negreiros (1620-1680), o índio
+morubixaba potiguar Antônio Felipe Camarão (1580-????) e o negro pernambucano Henrique Dias (????-1662). Esses homens
+bravos estão eternizados nas nomenclaturas oficiais de alguns importantes batalhões da Polícia Militar e do Exército brasileiro.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Restauração Pernambucana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp10">
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#EdvaldoGato"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioDeJaneiro"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MestreVitalino"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Fosforescente"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital201974"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.50</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-10-16T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Integrante de uma série denominada Cultura Popular Brasileira: rede de dormir; renda de bilro e literatura de cordel, este selo
+celebra, preserva e dissemina a diversidade de artefatos culturais e seus artesões. O tratamento manual dado aos artefatos é sua
+peculiaridade. O apoio das ferramentas assume a condição de “extensão do homem”, multiplicando possibilidades nos atos de
+transformar e revelar a natureza do Ser. A obra do mestre sobrepõe-se à ostentação da erudição acadêmica que busca classificar
+cientificamente e delimitar escopos temporais às maneiras que os artistas escolhem ler os mundos. A década de 70, para além do
+que já foi citado anteriormente, marcou na Filatelia brasileira o início de um movimento que buscou uma outra identidade
+nacional. Em plena vigência do Regime Militar, tendo à frente da Presidência da República o General Ernesto Geisel, os
+processos gráficos, o design e os assuntos abordados nos selos postais, podem ser pensados como um reencontro com a
+República. Referências históricas e símbolos culturais nacionais foram valorizados como motivos para as emissões dos selos,
+caracterizando uma maior aceitação da diversidade, criatividade e multi-pluraridade do patrimônio cultural nacional. A imagem
+trata de um mini-artefato de barro do Mestre Vitalino, aquilo que identifica o mundo em que se insere o artesão e seus
+conterrâneos. O cangaceiro sobre o pangaré, ambos cobertos por indumentárias pitorescas (coração na brida, óculos, chapéu de
+couro com pentagrama na aba etc.), remete seu criador para um mundo paralelo; da Real-realidade ao Real-imaginário. Existe um
+certo tipo de linguagem brechtiana que, por meio da escultura de barro esculpi a vida cotidiana, não a fantasia midiática. Um
+“mundo não era estranho a Vitalino, em cujo limiar vivia, o mundo das privações dos pobres do campo”. Três características são
+marcantes nos selos postais comemorativos brasileiros nos anos 70: o nome &amp;#39;Brasil&amp;#39; em minúscula; o desuso do termo &amp;#39;Correio&amp;#39; e o
+não-limite das imagens. Diria Foucault que a “imagem saiu da moldura”. Uma imagem onde o infinito é sua amplitude, sem
+limites de traços e ao mesmo tempo traços inacabados.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Cerâmica de Vitalino</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DarlanManoelRosa"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SUDENE"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital351984"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-12-14T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">O subdesenvolvimento nordestino era uma resultante de múltiplos fatores interligados com sua economia e não uma simples
+conseqüência da seca, como até então era interpretado. Por isso, o governo do então Presidente Juscelino Kubitscheck, através da
+Lei n° 3.692 (15.12.1959), criou a Superintendência do Desenvolvimento do Nordeste (SUDENE), talvez inspirado por Celso
+Furtado. Sua sede ficava num enorme edifício, localizado na Cidade Universitária, no Recife. Extinto, em 2001, pelo governo do
+Presidente Fernando Henrique Cardoso, foi reimplantada pelo governo do Partido dos Trabalhadores (PT) pela Lei Complementar
+em 2007. A imagem do selo mostra uma fusão de investimentos e projetos administrados pelo órgão (estradas, maquinário,
+agropecuária, água e indústria). Todas desenhadas na aba do chapéu do homem nordestino, o qual era tido como o foco primeiro
+do órgão. Um símbolo de avanço, de sinal positivo para a industrialização, para a educação em todos os níveis, em especial para o
+superior, com a criação nas universidades, dos institutos de pesquisas básicas, e o fomento à capacitação de pessoal, com o
+aumento do número de livros e de revistas especializadas nas redes de bibliotecas universitárias. Tudo isso sem descuidar de
+preparar seus servidores. De lembrar o incentivo ao artesanato da Região. Apesar dos olhos vigilantes desse homem
+prevaleceram, principalmente, do final dos anos 80 até o ano de sua extinção, os escândalos financeiros e administrativos,
+apoiados sob o jargão da &amp;#39;indústria da seca&amp;#39;. Uma narrativa que o texto postal não conta. Donos de terras, bancos e políticos se
+beneficiaram de vários modos, para além de uma ética econômico-social. O discurso na década de 80, sobre a SUDENE e o lançamento do selo para comemorar seus 25 anos, talvez tenha saído honesto e sincero, pelo menos, naquelas duas primeiras
+décadas de atividades do órgão.</rdfs:comment>
+        <rdfs:label xml:lang="pt">25 anos da Superintendência de Desenvolvimento do Nordeste(SUDENE)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PortoAlegre"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</philately:faceValue>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2100000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">O Ministério dos Transportes implantou um sistema metroviário no Recife (PE) e Porto Alegre (RS). O objetivo era substituir a
+utilização de carros particulares e ônibus, economizando combustível e reduzindo a poluição. &amp;#39;Os fatores que levaram à instalação
+do sistema foram a sua elevada capacidade de transporte, os baixos custos de implantação, o domínio tecnológico, etc&amp;#39;. O
+enunciado verbal impresso no selo enaltece um discurso positivo, do governo federal, sobre esse projeto: &amp;#39;custo menor, transporte
+melhor&amp;#39;. A iconicidade foca no aspecto tecnológico do serviço. Uma planta arquitetônica sugere o modelo ideal de estação. Os
+traços, feitos manualmente, vinculam cada trem à cidade de implementação do sistema por meio das logomarcas. A logomarca da
+esquerda, todo em tom de cinza, alude à &amp;#39;Empresa de Trens Urbanos de Porto Alegre (TRENSURB)&amp;#39;. A logomarca da direita, de
+cores cinza e amarela, representa o &amp;#39;Consórcio do Trem Metropolitano do Recife (METROREC)&amp;#39;. É interessante salientar que, a
+partir da segunda metade dos anos 80, a &amp;#39;eleição do Melhor Selo do Ano, concurso instituído pelos Correios desde 1973, passou a
+ser realizada por meio de votação popular&amp;#39;.</rdfs:comment>
+        <rdfs:label xml:lang="pt">19 - Metrô de superfície</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CommemorativePostageStamp"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioGrandeDoSul"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CruzeiroReal"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220.00</philately:faceValue>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#int">44</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2200000</philately:numberOfPostageStampsIssued>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp30">
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#JoOliveira"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#DiarioDePernambuco"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital301995"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-12-14T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</philately:numberOfPostageStampsIssued>
+        <rdfs:label xml:lang="pt">170 anos do Diário de Pernambuco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OliviaCastro"/>
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SergioEsteban"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Olinda"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-06-02T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Este selo faz parte de uma série de três selos emitidos, em formato de Bloco Comemorativo, para homenagear a cidade de Olinda.
+Essa emissão também foi utilizada para divulgar a Exposição Filatélica Mundial (PHILEXFRANCE99), ocorrida de 02 a 11 de
+julho em Paris. No selo, os artistas realçaram a presença da flora local que cerca a beleza arquitetônica da cidade (casas e Igrejas).
+Incluíram pessoas com trajes típicos, do que sugere ser uma pose para ‘foto’ de uma cerimônia de casamento, três freiras andando
+ao fundo, próximas a um passante sobre uma bicicleta. Fica evidente que Olinda destaca-se pela devoção cristã e majestade de
+suas Igrejas. Ao fundo, em tons de azul, o que não poderia deixar de ser lembrado, o mar e o céu, símbolos marcantes da cidade.
+Essa imagem sugere um olhar documental, aproximado à polissemia da fotografia e, também, à expressão das pinturas. O
+perfilamento centralizado dos familiares, do noivo e da noiva sugere um ato fotográfico, em que fala mais à vista, a cultura visual
+tradicional do século XX, do que a atual. A centralidade das pessoas, cercadas por objetos, provoca o nosso olhar: isso não é real,
+concreto, mas é como se dá o real nas fotos determinadas pelas poses predetermianadas. É nesse tipo de construção, de
+comunicação visual que o espaço-tempo do real se configura na imaginação e, assim, ganha seu lugar de ação. O que quer ser dito é visto por um modo de ver, pautado num modo de ver ocidental, aquele que é inerente à nossa cultura visual. A quem cabe
+decifrar àquilo que está dito, visível, mas nessa imagem está escondido, invisível? Por meio deste selo postal, e de cada um que
+compõe esta obra, pesquisadores de áreas diversas e distintas podem, se pararem para olhar com atenção, descobrir um mundo
+infinito de indagações pertinentes ao estatuto daquilo chamado de “científico”. Este selo sintetiza várias forças. Essa imagem e os
+objetos pictóricos plasmados pelo artista constituem um fragmento de um momento. Está, assim, posta uma problemática da
+ontologia da realidade imagética.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Olinda/PE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostageStamp32">
+        <philately:CreatedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#MarcioRocha"/>
+        <philately:IssueBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CorreiosDoBrasil"/>
+        <philately:ProducedBy rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CasaDaMoedaDoBrasil"/>
+        <philately:hasFirstStampIn rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife"/>
+        <philately:hasIssueReason rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#GilbertoFreyre"/>
+        <philately:hasMaterial rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#CouchePaper"/>
+        <philately:hasOficialRecord rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Edital062000"/>
+        <philately:isFacialValueCurrency rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real"/>
+        <philately:useTechnique rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#OffSet"/>
+        <philately:faceValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.36</philately:faceValue>
+        <philately:issueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-03-24T00:00:00</philately:issueDate>
+        <philately:numberOfPostageStampsBySheet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</philately:numberOfPostageStampsBySheet>
+        <philately:numberOfPostageStampsIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2160000</philately:numberOfPostageStampsIssued>
+        <rdfs:comment xml:lang="pt">Apesar de este selo homenagear Gilberto Freyre, ele foi selecionado para compor o mini-acervo deste livro porque tem, na sua
+textualidade, um conjunto de ícones que remetem a um discurso de pernambucanidade. O principal ícone é uma réplica
+fotografada do Casarão Rosa, atual casa-museu da Fundação Gilberto Freyre, situada num parque ecológico, bairro de Apipucos,
+Cidade do Recife. O tom de rosa se espalha por todos os recantos da moldura. O artista deste selo propôs a fusão de um conjunto
+de elementos representativos das práticas do intelectual, por meio de técnicas de computação gráfica. Os livros na biblioteca, um
+lápis e dois pincéis, todos rememoram as atividades artísticas e intelectuais. Como resultado, surge um mini-quadro, em que
+figura uma reprodução fiel da Fundação Gilberto Freire, seu &amp;#39;objetivo e prioridade&amp;#39;. Ao centro da imagem desse selo vê-se um
+brasão, marca constante nas suas correspondências, atualmente, logomarca da Fundação. Por fim, a imagem carismática do
+próprio Gilberto Freyre.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Centenário de Nascimento de Gilberto Freyre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+        <philately:currencySymbol>R$</philately:currencySymbol>
+        <rdfs:label xml:lang="pt">Real brasileiro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Recife">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City"/>
+        <philately:isPartOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RestauracaoPernambucana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RestauracaoPernambucana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+        <rdfs:label xml:lang="pt">Restauração Pernambucana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RevolucaoPernambucana1817 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RevolucaoPernambucana1817">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#HistoricalEvent"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Pernambuco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioDeJaneiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioDeJaneiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioGrandeDoSul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#RioGrandeDoSul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State"/>
+        <philately:isPartOf rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Rotogravura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Rotogravura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SUDENE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SUDENE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#StateOwnedCompany"/>
+        <rdfs:label xml:lang="pt">25 anos da Superintendência de Desenvolvimento do Nordeste(SUDENE)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SergioEsteban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#SergioEsteban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Sérgio Esteban</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TalhoDoce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TalhoDoce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+        <rdfs:label xml:lang="pt">Talho doce (Walter Broges Freitas)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TerceiroCongressoEucharisticoNacioanal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#TerceiroCongressoEucharisticoNacioanal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Tipografia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Tipografia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#WaldemiroPuntar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#WaldemiroPuntar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Artist"/>
+        <rdfs:label xml:lang="pt">Waldemiro Puntar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Xilagrafia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Xilagrafia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Printing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Real(old_currency)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Currency"/>
+        <philately:isFrom rdf:resource="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Brazil"/>
+        <philately:currencySymbol>Rs$</philately:currencySymbol>
+        <rdfs:comment xml:lang="pt">Real (plural réis) foi o nome da unidade monetária utilizada no Brasil[3] desde sua colonização[4] até 5 de outubro de 1942, quando foi substituída pelo cruzeiro na razão de 1 cruzeiro por 1 mil-réis.
+Como essa unidade monetária não era fracionável (diferente do Real adotado em 1994, que se fraciona em centavos) o uso do termo réis, no plural, era predominante.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Real (réis)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#State"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Document"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Institution"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Meterial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Place"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PostegeStamp"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Technique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#Watermark"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PrivateCompany"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#PublicCompany"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vcab/ontologies/2022/0/philately#StateOwnedCompany"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
